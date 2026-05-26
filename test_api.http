@@ -1,0 +1,41 @@
+### 1. 获取所有节点信息
+GET http://localhost:5000/api/all_nodes
+
+### 2. 获取当前掌握度
+GET http://localhost:5000/api/get_status
+
+### 3. 更新变量掌握度 85%
+POST http://localhost:5000/api/update
+Content-Type: application/json
+
+{
+    "node_name": "变量",
+    "mastery": 0.85
+}
+
+### 4. 更新循环掌握度 45%
+POST http://localhost:5000/api/update
+Content-Type: application/json
+
+{
+    "node_name": "循环",
+    "mastery": 0.45
+}
+
+### 5. 更新函数掌握度 20%
+POST http://localhost:5000/api/update
+Content-Type: application/json
+
+{
+    "node_name": "函数",
+    "mastery": 0.20
+}
+
+### 6. 重置变量掌握度 0
+POST http://localhost:5000/api/update
+Content-Type: application/json
+
+{
+    "node_name": "变量",
+    "mastery": 0
+}
